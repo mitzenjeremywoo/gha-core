@@ -7,7 +7,7 @@ on:
   workflow_call:
     inputs:
       dotnet-version:
-        required: true
+        required: false
         type: string
         default: '8.0x'
 jobs:
