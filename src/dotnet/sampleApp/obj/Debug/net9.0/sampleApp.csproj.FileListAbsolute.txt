@@ -1,0 +1,15 @@
+C:\Work\gha-core\src\dotnet\sampleApp\bin\Debug\net9.0\sampleApp.exe
+C:\Work\gha-core\src\dotnet\sampleApp\bin\Debug\net9.0\sampleApp.deps.json
+C:\Work\gha-core\src\dotnet\sampleApp\bin\Debug\net9.0\sampleApp.runtimeconfig.json
+C:\Work\gha-core\src\dotnet\sampleApp\bin\Debug\net9.0\sampleApp.dll
+C:\Work\gha-core\src\dotnet\sampleApp\bin\Debug\net9.0\sampleApp.pdb
+C:\Work\gha-core\src\dotnet\sampleApp\obj\Debug\net9.0\sampleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\gha-core\src\dotnet\sampleApp\obj\Debug\net9.0\sampleApp.AssemblyInfoInputs.cache
+C:\Work\gha-core\src\dotnet\sampleApp\obj\Debug\net9.0\sampleApp.AssemblyInfo.cs
+C:\Work\gha-core\src\dotnet\sampleApp\obj\Debug\net9.0\sampleApp.csproj.CoreCompileInputs.cache
+C:\Work\gha-core\src\dotnet\sampleApp\obj\Debug\net9.0\sampleApp.sourcelink.json
+C:\Work\gha-core\src\dotnet\sampleApp\obj\Debug\net9.0\sampleApp.dll
+C:\Work\gha-core\src\dotnet\sampleApp\obj\Debug\net9.0\refint\sampleApp.dll
+C:\Work\gha-core\src\dotnet\sampleApp\obj\Debug\net9.0\sampleApp.pdb
+C:\Work\gha-core\src\dotnet\sampleApp\obj\Debug\net9.0\sampleApp.genruntimeconfig.cache
+C:\Work\gha-core\src\dotnet\sampleApp\obj\Debug\net9.0\ref\sampleApp.dll
