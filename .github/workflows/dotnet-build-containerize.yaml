@@ -10,18 +10,19 @@ on:
         required: false
         type: string
         default: '8.0x'
+
 jobs:
-  # build:
-  #   runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v4
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-  #     - name: Setup dotnet
-  #       uses: actions/setup-dotnet@v4
-  #       with:
-  #         dotnet-version: '${{ inputs.dotnet-version }}'
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '${{ inputs.dotnet-version }}'
   
   #     - name: Install dependencies
   #       run: dotnet restore
