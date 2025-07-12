@@ -46,16 +46,8 @@ jobs:
         run: ls -al ${{ github.workspace }}
       
       - name: Publish to GitHub Packages
-        run: dotnet nuget push ./nupkgs/*.nupkg  --source github --skip-duplicate
-        # env:
-        #   NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: dotnet nuget push ./nupkgs/*.nupkg  --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --skip-duplicate
       
-  #     - name: Install dependencies
-  #       run: dotnet restore
-  
-  #     - name: Build
-  #       run: dotnet build --no-restore
-  
   #     - name: Test with the dotnet CLI
   #       run: dotnet test --no-build
 
