@@ -19,11 +19,34 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup dotnet
+      - name: Setup dotnet and package endpoint
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '${{ inputs.dotnet-version }}'
-  
+          source-url: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      
+      - name: Restore build and package all .NET projects
+        run: |
+          for proj in $(find . -name "*.csproj"); do
+            echo "Building $proj"
+            dotnet restore "$proj"
+            dotnet build "$proj" --no-restore --configuration Release
+            dotnet pack --configuration Release --no-build --output ./nupkgs
+          done
+
+      - name: debug packages 
+        run: ls -al ./nupkgs
+      
+      - name: Publish to GitHub Packages
+        run: dotnet nuget push ./nupkgs/*.nupkg \
+               --source "github" \
+               --api-key ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+
   #     - name: Install dependencies
   #       run: dotnet restore
   
@@ -34,7 +57,7 @@ jobs:
   #       run: dotnet test --no-build
 
   containerize:
-    
+
     permissions:
       contents: read
       packages: write
