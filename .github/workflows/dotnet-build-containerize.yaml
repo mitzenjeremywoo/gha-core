@@ -46,7 +46,7 @@ jobs:
         run: ls -al ${{ github.workspace }}
       
       - name: Publish to GitHub Packages
-        run: dotnet nuget push ./nupkgs/*.nupkg --skip-duplicate
+        run: dotnet nuget push ./nupkgs/*.nupkg  --source github --skip-duplicate
         # env:
         #   NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
