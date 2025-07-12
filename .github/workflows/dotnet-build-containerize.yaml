@@ -36,7 +36,6 @@ jobs:
             echo "Building $proj"
             dotnet restore "$proj"
             dotnet build "$proj" --no-restore --configuration Release
-            dotnet pack --configuration Release --no-build --output ./nupkgs
           done
 
       - name: debug packages 
